@@ -1,0 +1,5 @@
+socket.py
+opencv-python
+Pillow
+numpy
+pyvirtualcam
