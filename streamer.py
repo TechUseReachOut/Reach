@@ -24,13 +24,13 @@ vc = cv2.VideoCapture(0)
 
 overlay = None
 b,g,r,a = 0,0,0,0
-msg = ["NEWS DEVELOPMENT","NAGBITIW NA SA PWESTO AND QUEEN","BEE DAHIL SA PAGNANAKAW NG TAO","SA KANILANG HONEY"]
+msg = ["TOPIC"," "," "," "]
 fontpath = "./fonts/Helvetica-Bold.ttf"
 font = ImageFont.truetype(fontpath, 32)
 
 HEADER = 64 # allowed length of message in bytes
 PORT = 8080
-SERVER = "192.168.100.24" # socket.gethostbyname(socket.gethostname())
+SERVER = socket.gethostbyname(socket.gethostname())#"192.168.X.X" 
 ADDR = (SERVER, PORT)
 FORMAT = 'utf-8'
 DISCONNECT_MESSAGE = "!DISCONNECT"
@@ -101,10 +101,3 @@ with pyvirtualcam.Camera(width=640, height=480, fps=30) as cam:
 vc.release()
 writer.realease()
 cv2.destroyAllWindows()
-
-
-
-
-
-
-
